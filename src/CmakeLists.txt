@@ -1,3 +1,31 @@
-add_executable(lightning_exe main.cpp)
-target_link_libraries(lightning_exe PRIVATE ImGui-SFML::ImGui-SFML)
- 
+add_executable(prog
+    main.cpp
+    App.cpp
+    Window.cpp
+    Input.cpp
+    Camera.cpp
+    MapRenderer.cpp
+    ResourceManager.cpp
+    Texture.cpp
+    glad.c
+)
+
+target_link_libraries(prog PRIVATE
+    project_headers
+    ${CMAKE_DL_LIBS}
+)
+
+if(TARGET SDL2::SDL2)
+    target_link_libraries(prog PRIVATE SDL2::SDL2)
+elseif(TARGET SDL2::SDL2-static)
+    target_link_libraries(prog PRIVATE SDL2::SDL2-static)
+else()
+    target_link_libraries(prog PRIVATE SDL2)
+endif()
+
+# Keep runtime assets close to the executable for easy local runs.
+add_custom_command(TARGET prog POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+        ${PROJECT_SOURCE_DIR}/shaders
+        $<TARGET_FILE_DIR:prog>/shaders
+)

@@ -1,0 +1,38 @@
+[
+{
+  "directory": "/mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/build-umf/src",
+  "command": "/usr/bin/c++  -I/mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/include -I/mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/thirdparty -I/mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/thirdparty/glm-master -isystem /usr/include/SDL2 -g -std=c++17 -o CMakeFiles/prog.dir/main.cpp.o -c /mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/src/main.cpp",
+  "file": "/mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/src/main.cpp",
+  "output": "src/CMakeFiles/prog.dir/main.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/build-umf/src",
+  "command": "/usr/bin/c++  -I/mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/include -I/mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/thirdparty -I/mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/thirdparty/glm-master -isystem /usr/include/SDL2 -g -std=c++17 -o CMakeFiles/prog.dir/App.cpp.o -c /mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/src/App.cpp",
+  "file": "/mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/src/App.cpp",
+  "output": "src/CMakeFiles/prog.dir/App.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/build-umf/src",
+  "command": "/usr/bin/c++  -I/mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/include -I/mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/thirdparty -I/mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/thirdparty/glm-master -isystem /usr/include/SDL2 -g -std=c++17 -o CMakeFiles/prog.dir/Window.cpp.o -c /mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/src/Window.cpp",
+  "file": "/mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/src/Window.cpp",
+  "output": "src/CMakeFiles/prog.dir/Window.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/build-umf/src",
+  "command": "/usr/bin/c++  -I/mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/include -I/mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/thirdparty -I/mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/thirdparty/glm-master -isystem /usr/include/SDL2 -g -std=c++17 -o CMakeFiles/prog.dir/Input.cpp.o -c /mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/src/Input.cpp",
+  "file": "/mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/src/Input.cpp",
+  "output": "src/CMakeFiles/prog.dir/Input.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/build-umf/src",
+  "command": "/usr/bin/c++  -I/mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/include -I/mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/thirdparty -I/mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/thirdparty/glm-master -isystem /usr/include/SDL2 -g -std=c++17 -o CMakeFiles/prog.dir/Camera.cpp.o -c /mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/src/Camera.cpp",
+  "file": "/mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/src/Camera.cpp",
+  "output": "src/CMakeFiles/prog.dir/Camera.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/build-umf/src",
+  "command": "/usr/bin/cc  -I/mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/include -I/mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/thirdparty -I/mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/thirdparty/glm-master -isystem /usr/include/SDL2 -g -o CMakeFiles/prog.dir/glad.c.o -c /mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/src/glad.c",
+  "file": "/mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/src/glad.c",
+  "output": "src/CMakeFiles/prog.dir/glad.c.o"
+}
+]

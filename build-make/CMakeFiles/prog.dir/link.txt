@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/prog.dir/src/main.cpp.o CMakeFiles/prog.dir/src/App.cpp.o CMakeFiles/prog.dir/src/Window.cpp.o CMakeFiles/prog.dir/src/Input.cpp.o CMakeFiles/prog.dir/src/Camera.cpp.o CMakeFiles/prog.dir/src/glad.c.o -o prog  /usr/lib/x86_64-linux-gnu/libSDL2.so -ldl 
