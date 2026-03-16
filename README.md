@@ -24,9 +24,3 @@ Quick non-interactive crash trace for the debug build:
 gdb -q -batch -ex run -ex "bt full" --args ./build/debug/src/prog
 ```
 
-## Milestones
-
-https://github.com/user-attachments/assets/fee36a86-c893-455d-bec3-ae67aecdc8df
-
-
-
