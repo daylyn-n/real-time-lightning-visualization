@@ -1,7 +1,0 @@
-/mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/build/asan/CMakeFiles/edit_cache.dir
-/mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/build/asan/CMakeFiles/rebuild_cache.dir
-/mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/build/asan/include/CMakeFiles/edit_cache.dir
-/mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/build/asan/include/CMakeFiles/rebuild_cache.dir
-/mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/build/asan/src/CMakeFiles/prog.dir
-/mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/build/asan/src/CMakeFiles/edit_cache.dir
-/mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/build/asan/src/CMakeFiles/rebuild_cache.dir

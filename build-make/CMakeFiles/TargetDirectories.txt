@@ -1,7 +1,0 @@
-/mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/build-make/CMakeFiles/edit_cache.dir
-/mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/build-make/CMakeFiles/rebuild_cache.dir
-/mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/build-make/include/CMakeFiles/edit_cache.dir
-/mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/build-make/include/CMakeFiles/rebuild_cache.dir
-/mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/build-make/src/CMakeFiles/prog.dir
-/mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/build-make/src/CMakeFiles/edit_cache.dir
-/mnt/c/Users/dayly/cotin/projects/light/real-time-lightning-visualization/build-make/src/CMakeFiles/rebuild_cache.dir
