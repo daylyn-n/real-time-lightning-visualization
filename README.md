@@ -1,4 +1,4 @@
-# openGl playground
+# OpenGL playground
 
 ## Build presets
 
