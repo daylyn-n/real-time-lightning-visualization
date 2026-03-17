@@ -52,7 +52,6 @@ void MapRenderer::DrawMap(Texture2D &tex, glm::vec2 pos,
     model = glm::scale(model, glm::vec3(size, 1.0f));
 
     shader_->setMat4("uModel", model);
-    glActiveTexture(GL_TEXTURE0);
     tex.Bind();
     mapVAO_.bind();
     glDrawArrays(GL_TRIANGLES, 0, 6);

@@ -10,6 +10,7 @@
 #include "Texture.hpp"
 #include <memory>
 #include "MapRenderer.hpp"
+#include "Data.hpp"
 class App
 {
     public:
@@ -32,7 +33,8 @@ class App
         VBO triangleVbo_;
         std::unique_ptr<ShaderProgram> triangleShader_;
         bool initialized_;
-        MapRenderer *map_;
+        std::unique_ptr<MapRenderer> map_;
+        std::unique_ptr<Data> lightningData_;
         Texture2D mapTexture_;
 };
 
