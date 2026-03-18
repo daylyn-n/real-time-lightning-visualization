@@ -17,5 +17,5 @@ void main()
     vPolarity = aPolarity;
 
     gl_Position = uProjection * vec4(aPos, 0.0, 1.0);
-    gl_PointSize = uBasePointSize + (clamp(aIntensity, 0.0, 1.0) * uSizeScale);
+    gl_PointSize = uBasePointSize + (clamp(aIntensity, 0.0, 1.0) * (uSizeScale - 2.0f));
 }

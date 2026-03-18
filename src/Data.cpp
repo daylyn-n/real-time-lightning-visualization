@@ -1,8 +1,12 @@
 #include "../include/Data.hpp"
 #include <algorithm>
+#include <cstddef>
+#include <fstream>
 #include <memory>
+#include <string>
+#include <sstream>
 #include <vector>
-
+#include <iostream>
 Data::Data(const ShaderProgram &shader)
     : elapsedTimeSec_(0.0f),
     maxAgeSec_(25.0f)
@@ -50,18 +54,45 @@ void Data::RefreshVertexData(float width, float height)
     VBO::unbind();
 }
 
+std::vector<LightningStrike> Data::GetCSVData(const std::string& csv)
+{
+    std::ifstream file(csv);
+    if(!file.is_open())
+    {
+        std::cerr << "Error opening file" << std::endl;
+        exit(1);
+    }
+    std::string line;
+
+    // loops every new line
+    while(std::getline(file, line))
+    {
+        std::stringstream ss(line);
+        std::string value;
+
+        std::vector<float> values;
+
+        while(std::getline(ss, value, ','))
+        {
+            values.push_back(std::stof(value));
+        }
+
+        if(values.size() >= 5)
+        {
+            strikes_.push_back({
+                    values[0],
+                    values[1],
+                    values[2],
+                    values[3],
+                    values[4],
+                    });
+        }
+    }
+    return strikes_;
+}
 void Data::InitData()
 {
-    strikes_ = {
-        {0.0f, 0.0f, 0.5f, 0.80f, 1.0f},
-        {51.5072f, -0.1276f, 2.0f, 0.70f, -1.0f},
-        {40.7128f, -74.0060f, 3.2f, 0.62f, 1.0f},
-        {35.6762f, 139.6503f, 5.0f, 0.55f, -1.0f},
-        {-33.8688f, 151.2093f, 7.0f, 0.95f, 1.0f},
-        {-23.5505f, -46.6333f, 8.5f, 0.74f, -1.0f},
-        {64.2008f, -149.4937f, 10.0f, 0.48f, 1.0f},
-        {-77.8419f, 166.6863f, 11.5f, 0.66f, -1.0f}
-    };
+    GetCSVData("assets/test_data.csv");
 
     dataVAO_.create();
     dataVAO_.bind();
@@ -69,10 +100,10 @@ void Data::InitData()
     dataVBO_.create();
     dataVBO_.bind();
 
-    dataVAO_.setVertexAttrib(0, 2, 5 * sizeof(GLfloat), 0);
-    dataVAO_.setVertexAttrib(1, 1, 5 * sizeof(GLfloat), 2 * sizeof(GLfloat));
-    dataVAO_.setVertexAttrib(2, 1, 5 * sizeof(GLfloat), 3 * sizeof(GLfloat));
-    dataVAO_.setVertexAttrib(3, 1, 5 * sizeof(GLfloat), 4 * sizeof(GLfloat));
+    dataVAO_.setVertexAttrib(0, 2, 5 * sizeof(GLfloat), 0); // pos
+    dataVAO_.setVertexAttrib(1, 1, 5 * sizeof(GLfloat), 2 * sizeof(GLfloat)); // age 
+    dataVAO_.setVertexAttrib(2, 1, 5 * sizeof(GLfloat), 3 * sizeof(GLfloat)); // intensity 
+    dataVAO_.setVertexAttrib(3, 1, 5 * sizeof(GLfloat), 4 * sizeof(GLfloat)); // polarity
 
     RefreshVertexData(1280.0f, 720.0f);
 

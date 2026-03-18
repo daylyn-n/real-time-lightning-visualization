@@ -27,5 +27,5 @@ void main()
     float ageFade = max(0.25, 1.0 - clamp(vAgeNorm, 0.0, 1.0));
     float alpha = edgeFalloff * ageFade;
 
-    color = vec4(strikeColor, alpha);
+    color = vec4(strikeColor, 1.0f);
 }

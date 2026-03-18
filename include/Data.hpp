@@ -19,7 +19,9 @@
 #include "MapRenderer.hpp"
 #include <vector>
 #include <math.h>
-
+#include <string>
+#include <fstream>
+#include <sstream>
 struct LightningStrike
 {
     float latitude;
@@ -50,6 +52,7 @@ class Data
                                         float height);
         void RefreshVertexData(float width, float height);
 
+        std::vector<LightningStrike> GetCSVData(const std::string &csv);
 };
 
 #endif

@@ -49,7 +49,7 @@ bool App::initialize()
     ResourceManager::GetShader("lightning").use();
     ResourceManager::GetShader("lightning").setMat4("uProjection", projection);
     ResourceManager::GetShader("lightning").setFloat("uBasePointSize", 8.0f);
-    ResourceManager::GetShader("lightning").setFloat("uSizeScale", 20.0f);
+    ResourceManager::GetShader("lightning").setFloat("uSizeScale", 5.0f);
 
     map_ = std::make_unique<MapRenderer>(ResourceManager::GetShader("map"));
     lightningData_ = std::make_unique<Data>(ResourceManager::GetShader("lightning"));
@@ -89,7 +89,6 @@ void App::shutdown()
         return;
     }
 
-    destroyTriangle();
     lightningData_.reset();
     map_.reset();
     ResourceManager::Clear();
@@ -97,44 +96,6 @@ void App::shutdown()
     initialized_ = false;
 }
 
-bool App::setupTriangle()
-{
-    const std::vector<GLfloat> vertexPos
-    {
-        -0.8f, -0.8f, 0.0f,
-         0.8f, -0.8f, 0.0f,
-         0.0f,  0.8f, 0.0f,
-    };
-
-    triangleVao_.create();
-    triangleVao_.bind();
-
-    triangleVbo_.create();
-    triangleVbo_.bind();
-    triangleVbo_.setData(vertexPos);
-
-    triangleVao_.setVertexAttrib(0, 3, 3 * sizeof(GLfloat), 0);
-    VBO::unbind();
-    VAO::unbind();
-
-    triangleShader_ = std::make_unique<ShaderProgram>(
-        "shaders/simple_triangle_vert.glsl",
-        "shaders/simple_triangle_frag.glsl");
-
-    if (triangleShader_->GraphicsPipelineShaderProgram == 0)
-    {
-        return false;
-    }
-
-    return true;
-}
-
-void App::destroyTriangle()
-{
-    triangleShader_.reset();
-    triangleVbo_.destroy();
-    triangleVao_.destroy();
-}
 
 void App::update(float deltaTime)
 {
