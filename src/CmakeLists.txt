@@ -5,6 +5,7 @@ add_executable(prog
     Input.cpp
     Camera.cpp
     MapRenderer.cpp
+    Data.cpp
     ResourceManager.cpp
     Texture.cpp
     glad.c
@@ -12,6 +13,7 @@ add_executable(prog
 
 target_link_libraries(prog PRIVATE
     project_headers
+    glm::glm
     ${CMAKE_DL_LIBS}
 )
 

@@ -1,10 +1,10 @@
 #ifndef CAMERA_HPP
 #define CAMERA_HPP
 
-#include "../thirdparty/glm-master/glm/glm.hpp"
-#include "../thirdparty/glm-master/glm/gtc/matrix_transform.hpp"
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
 #define GLM_ENABLE_EXPERIMENTAL
-#include "../thirdparty/glm-master/glm/gtx/rotate_vector.hpp"
+#include <glm/gtx/rotate_vector.hpp>
 
 class Camera
 {
