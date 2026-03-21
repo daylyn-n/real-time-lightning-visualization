@@ -65,7 +65,7 @@ std::vector<LightningStrike> Data::GetCSVData(const std::string& csv)
     std::string line;
 
     // loops every new line
-    while(std::getline(file, line))
+    while(std::getline(file, line, '\n'))
     {
         std::stringstream ss(line);
         std::string value;
@@ -124,3 +124,14 @@ void Data::DrawPlot()
     glDrawArrays(GL_POINTS, 0, static_cast<GLsizei>(strikes_.size()));
     VAO::unbind();
 }
+
+
+
+
+
+
+
+
+
+
+

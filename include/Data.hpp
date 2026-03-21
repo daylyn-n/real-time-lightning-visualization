@@ -22,6 +22,10 @@
 #include <string>
 #include <fstream>
 #include <sstream>
+
+// threading for websockets to get lughtning data
+
+
 struct LightningStrike
 {
     float latitude;
