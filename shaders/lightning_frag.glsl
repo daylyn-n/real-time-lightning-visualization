@@ -7,10 +7,10 @@ vec3 polarityColor(float polarity)
 {
     if (polarity >= 0.0)
     {
-        return vec3(1.0, 0.0, 0.0);
+        return vec3(0.0, 1.0, 0.0);
     }
 
-    return vec3(0.0, 1.0, 0.0);
+    return vec3(1.0, 0.2, 0.0);
 }
 
 void main()
@@ -27,5 +27,5 @@ void main()
     float ageFade = max(0.25, 1.0 - clamp(vAgeNorm, 0.0, 1.0));
     float alpha = edgeFalloff * ageFade;
 
-    color = vec4(strikeColor, 1.0f);
+    color = vec4(strikeColor, alpha);
 }

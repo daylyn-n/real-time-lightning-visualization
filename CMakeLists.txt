@@ -11,7 +11,28 @@ FetchContent_Declare(
 	GIT_SHALLOW TRUE
 )
 
-FetchContent_MakeAvailable(glm)
+# nlohmann JSON 
+FetchContent_Declare(
+    nlohmann_json
+    GIT_REPOSITORY https://github.com/nlohmann/json.git
+    GIT_TAG v3.11.3
+    GIT_SHALLOW TRUE
+)
+
+# IXWebSocket
+FetchContent_Declare(
+    ixwebsocket
+    GIT_REPOSITORY https://github.com/machinezone/IXWebSocket.git
+    GIT_TAG v11.4.5
+    GIT_SHALLOW TRUE
+)
+
+# IXWebSocket uses these cache options to enable TLS backends.
+set(USE_TLS ON CACHE BOOL "Enable TLS support for IXWebSocket" FORCE)
+set(USE_OPEN_SSL ON CACHE BOOL "Use OpenSSL backend for IXWebSocket TLS" FORCE)
+set(USE_MBED_TLS OFF CACHE BOOL "Disable mbedTLS backend for IXWebSocket TLS" FORCE)
+
+FetchContent_MakeAvailable(glm nlohmann_json ixwebsocket)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
