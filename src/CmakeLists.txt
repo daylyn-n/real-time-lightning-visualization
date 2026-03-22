@@ -11,9 +11,29 @@ add_executable(prog
     glad.c
 )
 
+# Resolve IXWebSocket target name before linking
+if(TARGET ixwebsocket::ixwebsocket)
+    set(IXWS_TARGET ixwebsocket::ixwebsocket)
+elseif(TARGET ixwebsocket)
+    set(IXWS_TARGET ixwebsocket)
+else()
+    message(FATAL_ERROR "IXWebSocket target not found")
+endif()
+
+# Resolve nlohmann_json target name before linking
+if(TARGET nlohmann_json::nlohmann_json)
+    set(JSON_TARGET nlohmann_json::nlohmann_json)
+elseif(TARGET nlohmann_json)
+    set(JSON_TARGET nlohmann_json)
+else()
+    message(FATAL_ERROR "nlohmann_json target not found")
+endif()
+
 target_link_libraries(prog PRIVATE
     project_headers
     glm::glm
+    ${JSON_TARGET}
+    ${IXWS_TARGET}
     ${CMAKE_DL_LIBS}
 )
 
